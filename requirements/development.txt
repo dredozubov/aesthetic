@@ -1,0 +1,4 @@
+-r production.txt
+
+ipython
+django_debug_toolbar
