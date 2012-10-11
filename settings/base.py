@@ -6,7 +6,7 @@ import os
 
 ROOT_DIR = os.path.abspath("")
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
