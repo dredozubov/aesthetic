@@ -15,7 +15,7 @@
             </tr>
             <tr>
               <td colspan="2">
-                {{ post.text|truncatechars:512}}&nbsp;<a href="{{ post.slug }}">[полностью]</a>
+                {{ post.text|truncatechars:512}}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a>
               </td>
             </tr>
         {% endfor %}
