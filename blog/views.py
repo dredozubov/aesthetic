@@ -11,7 +11,7 @@ class PostListView(ListView):
     template_name = 'post_list.html'
     model = Post
     context_object_name = "posts"
-    paginate_by = 3
+    paginate_by = 10
 
 post_detail = PostDetailView.as_view()
 post_list = PostListView.as_view(
