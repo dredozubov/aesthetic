@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
+    <title>Шум - {% block title %}{% endblock %}</title>
+</head>
+<body id="{% block body_id %}{% endblock %}">
+    <div id="header">
+      <h1>Энтузиаст об информационном шуме.</h1>
+    </div>
+  <div id="body">
+    {% block body %}
+      <div>
+        {% block content_title %}{% endblock %}
+      </div>
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    {% endblock %}
+  </div>
+
+<div class="clear"></div>
+<div id="footer">
+  Copyright 2012 &copy; Aestetic Blog by Denis Redozubov |<a href="/about/">Что это?</a> |</div>
+<div id="credit">
+ <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54_grey.gif" border="0" alt="Powered by Django." title="Powered by Django." /></a> 
+</body>
+</html>
+
