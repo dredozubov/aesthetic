@@ -13,6 +13,11 @@
                 <td><a href="{{ post.slug }}">{{ post.title }}</a></td>
                 <td>{{ post.created_at }}</td>
             </tr>
+            <tr>
+              <td colspan="2">
+                {{ post.text|truncatechars:512}}&nbsp;<a href="{{ post.slug }}">[полностью]</a>
+              </td>
+            </tr>
         {% endfor %}
     </table>
     {# .... **Now the pagination section** .... #}
