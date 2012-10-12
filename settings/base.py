@@ -112,6 +112,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_openid_auth',
     'south',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
@@ -119,6 +120,35 @@ INSTALLED_APPS = (
     #'django.contrib.admindocs',
     'blog',
 )
+
+# openid
+AUTHENTICATION_BACKENDS = (
+    'django_openid_auth.auth.OpenIDBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+OPENID_CREATE_USERS = True
+
+OPENID_UPDATE_DETAILS_FROM_SREG = True
+
+OPENID_FOLLOW_RENAMES = True
+
+#LOGIN_URL = '/openid/login/'
+#LOGIN_REDIRECT_URL = '/'
+
+# restrict to one openid server
+#OPENID_SSO_SERVER_URL = 'server-endpoint-url'
+
+# allow redirect to external openid urls
+#ALLOWED_EXTERNAL_OPENID_REDIRECT_DOMAINS = ['example.com', 'example.org']
+
+# custom login failed handler
+#OPENID_RENDER_FAILURE = failure_handler_function
+##        def failure_handler_function(request, message, status=None, template_name=None, exception=None)
+
+
+# /openid
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

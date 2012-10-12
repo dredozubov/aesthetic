@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'rufontechbuzz.views.home', name='home'),
     url(r'^posts/', include('blog.urls', namespace='posts')),
     url(ur'^about/$', TemplateView.as_view(template_name="about.html")),
+    url(r'^openid/', include('django_openid_auth.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
