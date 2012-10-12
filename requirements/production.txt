@@ -1,2 +1,6 @@
 django
 south
+python-openid
+django-openid-auth
+django-oauth
+django-social-auth
