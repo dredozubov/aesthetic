@@ -3,6 +3,6 @@ from django.conf.urls.defaults import *
 
 
 urlpatterns = patterns('blog.views',
-    (ur'^(?P<slug>[\w_]+)/?$', 'post_detail'),
-    (ur'^$', 'post_list'),
+    url(ur'^(?P<slug>[\w_]+)/?$', 'post_detail', name='detail'),
+    url(ur'^$', 'post_list', name='list'),
 )

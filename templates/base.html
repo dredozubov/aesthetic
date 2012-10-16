@@ -4,20 +4,25 @@
     {% load staticfiles %}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
+    <!—[if lt IE 7]>
+      <link rel="stylesheet" type="text/css" href="ie6.css" />
+    <![endif]—>
     <title>Шум - {% block title %}{% endblock %}</title>
 </head>
 
 <body id="{% block body_id %}{% endblock %}">
+  <div id="container">
     <div id="header">
       <h1>Энтузиаст об информационном шуме</h1>
-    </div>
+    </div> <!--/header-->
     <div id="header_menu">
       <ul>
-        <li><a href="">Архив</a></li>
+        <li><a href="{% url posts:list %}">Архив</a></li>
         <li><a href="">Тэги</a></li>
-        <li><a href="">Контакты</a></li>
+        <li><a href="{% url about %}">Контакты</a></li>
       </ul>
-    </div>
+    </div> <!--/header_menu-->
+
     <div id="body">
       <table><tr>
       <td>
@@ -41,11 +46,11 @@
       </td> <!--/menu_right-->
 
       </tr></table>
-  </div>
-
-<div class="clear"></div>
+  </div> <!--/body-->
+  <div class="clearfooter"></div>
+</div> <!--/container-->
 <div id="footer">
-  <p>Copyright 2012 &copy; Aestetic Blog by Denis Redozubov | <a href="/about/">Что это?</a></p>
+  <p>Copyright 2012 &copy; Aestetic Blog by Denis Redozubov | <a href="{% url about %}">Что это?</a></p>
 <div id="credit">
   <a href="http://www.djangoproject.com/">
     <img src="https://www.djangoproject.com/m/img/badges/djangopowered126x54_grey.gif" border="0" alt="Powered by Django." title="Powered by Django." />
@@ -54,4 +59,3 @@
 </div>
 </body>
 </html>
-
