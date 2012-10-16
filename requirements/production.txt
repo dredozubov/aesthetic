@@ -1,3 +1,5 @@
 MySQL-python
 django
 south
+docutils
+pygments
