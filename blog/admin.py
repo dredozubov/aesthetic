@@ -3,6 +3,7 @@ from blog.models import Post
 
 
 class PostAdmin(admin.ModelAdmin):
-    pass
+    exclude = ('text',)
+
 
 admin.site.register(Post, PostAdmin)
