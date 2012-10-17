@@ -5,20 +5,23 @@
 {% endblock %}
 
 {% block content %}
-    <h2>Записи</h2>
 {% if posts %}
     <table id="posts">
+      <tbody>
         {% for post in posts %}
             <tr>
-                <td><a href="{{ post.slug }}">{{ post.title }}</a></td>
-                <td>{{ post.created_at }}</td>
+                <td class="post_title title-box"><a href="{{ post.slug }}">{{ post.title }}</a></td>
             </tr>
-            <tr class="post_body" >
-              <td colspan="2">
+            <tr>
+                <td class="post_date">{{ post.created_at }}</td>
+            </tr>
+            <tr>
+              <td class="post_body" colspan="2">
                   <p>{{ post.text|safe|truncatechars:512 }}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a></p>
               </td>
             </tr>
         {% endfor %}
+      </tbody>
     </table>
     {# .... **Now the pagination section** .... #}
     {% if is_paginated %}
