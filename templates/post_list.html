@@ -13,9 +13,9 @@
                 <td><a href="{{ post.slug }}">{{ post.title }}</a></td>
                 <td>{{ post.created_at }}</td>
             </tr>
-            <tr>
+            <tr class="post_body" >
               <td colspan="2">
-                {{ post.text|safe|truncatechars:512}}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a>
+                  <p>{{ post.text|safe|truncatechars:512 }}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a></p>
               </td>
             </tr>
         {% endfor %}

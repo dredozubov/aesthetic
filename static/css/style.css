@@ -1,5 +1,6 @@
 * {
   line-height: 140%;
+  margin: 0;
 }
 
 html {
@@ -19,9 +20,10 @@ a {
 }
 
 #container {
-  min-height: 100%;
-  margin-bottom: -120px;
-  position: relative;
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -40px;  
 }
 
 #header {
@@ -94,13 +96,13 @@ a {
   margin-bottom: 30px;
 }
 
-.clearfooter {
-  height: 120px;
+#clearfooter {
+  height: 40px;
   clear: both;
 }
 
 #footer {
-  height: 120px;
+  height: 40px;
   position: relative;
   padding: 2px;
   color: white;
