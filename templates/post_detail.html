@@ -5,10 +5,19 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ post.title }}</h2>
-    <p>Написан: {{ post.created_at }}</p>
-    <ul>
-     {{ post.text|safe }}
-     <br>
-    </ul>
+  <table id="posts">
+    <tbody>
+      <tr>
+          <td class="post_title title-box"><a href="{{ post.slug }}">{{ post.title }}</a></td>
+      </tr>
+      <tr>
+          <td class="post_date">{{ post.created_at }}</td>
+      </tr>
+      <tr>
+        <td class="post_body" colspan="2">
+            <p>{{ post.text|safe|truncatechars:512 }}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a></p>
+        </td>
+        </tr>
+    </tbody>
+  </table>
 {% endblock %}
