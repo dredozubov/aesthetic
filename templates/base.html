@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    {% load staticfiles %}
     {% load static %}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
@@ -63,7 +62,7 @@
             <li class="resource_links">
               <a href="https://plus.google.com/116249723557063536298/posts" target="_blank"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png"></a>
               &nbsp;
-              <!--<a href="https://twitter.com/rufuse" target="_blank"><img src="{{ STATIC_URL}}/twitter-bird-light-bgs.ico"></a>-->
+              <!--<a href="https://twitter.com/rufuse" target="_blank"><img src="{% static "/twitter-bird-light-bgs.ico" %}"></a>-->
 
             </li>
           </ul>
