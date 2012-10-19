@@ -20,25 +20,29 @@
                   <p>{{ post.text|safe|truncatechars:512 }}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a></p>
               </td>
             </tr>
+            <tr>
+              <td>
+                  {% if is_paginated %}
+                      <div class="pagination">
+                          <span class="page-links">
+                              {% if page_obj.has_previous %}
+                                  <a href="/posts/?page={{ page_obj.previous_page_number }}">Предыдущая</a>
+                              {% endif %}
+                              <span class="page-current">
+                                  Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+                              </span>
+                              {% if page_obj.has_next %}
+                                  <a href="/posts/?page={{ page_obj.next_page_number }}">Следующая</a>
+                              {% endif %}
+                          </span>
+                      </div>
+                  {% endif %}
+              </td>
+            </tr>
         {% endfor %}
       </tbody>
     </table>
     {# .... **Now the pagination section** .... #}
-    {% if is_paginated %}
-        <div class="pagination">
-            <span class="page-links">
-                {% if page_obj.has_previous %}
-                    <a href="/posts/?page={{ page_obj.previous_page_number }}">Предыдущая</a>
-                {% endif %}
-                <span class="page-current">
-                    Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
-                </span>
-                {% if page_obj.has_next %}
-                    <a href="/posts/?page={{ page_obj.next_page_number }}">Следующая</a>
-                {% endif %}
-            </span>
-        </div>
-    {% endif %}
 {% else %}
     <p>Видимо здесь пока что пусто. :(</p>
 {% endif %}
