@@ -39,15 +39,8 @@
 <body id="{% block body_id %}{% endblock %}">
   <div id="container">
     <div id="header">
-      <h1>Энтузиаст об информационном шуме</h1>
+      <h1></h1>
     </div> <!--/header-->
-    <div id="header_menu">
-      <ul>
-        <li><a href="{% url posts:list %}">Архив</a></li>
-        <li><a href="">Тэги</a></li>
-        <li><a href="{% url about %}">Контакты</a></li>
-      </ul>
-    </div> <!--/header_menu-->
 
     <div id="body">
       <table><tr>
@@ -64,9 +57,8 @@
       <td id="menu_right">
         <div>
           <ul>
-            <li><a href="">menu</a></li>
-            <li><a href="">next</a></li>
-            <li><a href="">none</a></li>
+            <li><a href="{% url posts:list %}">Записи</a></li>
+            <li><a href="{% url about %}">Обо мне</a></li>
           </ul>
         </div>
       </td> <!--/menu_right-->
@@ -76,7 +68,7 @@
   <div id="clearfooter"></div>
 </div> <!--/container-->
 <div id="footer">
-  <p>Copyright 2012 &copy; Aestetic Blog by Denis Redozubov | <a href="{% url about %}">Что это?</a></p>
+  <p>&copy; 2012 Denis Redozubov | <a href="{% url about %}">Что это?</a></p>
 </div>
 </body>
 </html>
