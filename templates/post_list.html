@@ -17,7 +17,8 @@
             </tr>
             <tr>
               <td class="post_body" colspan="2">
-                  <p>{{ post.text|safe|truncatechars:512 }}&nbsp;<a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a></p>
+                <p>{{ post.text|safe|truncatechars:512 }}</p>
+                <a href="{{ post.slug }}">{% if post.text|length > 512 %}[полностью]{% endif %}</a>
               </td>
             </tr>
             <tr>
