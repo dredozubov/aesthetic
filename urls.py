@@ -18,4 +18,7 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^wanna/write/', include(admin.site.urls)),
+    url(r'^$', 'django.views.generic.simple.redirect_to',
+        {'url': '/posts/'},
+        name='home'),
 )
