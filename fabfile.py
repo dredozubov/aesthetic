@@ -1,5 +1,6 @@
 from fabric.api import *  # NOQA
-from .fabsettings import (PROJECTNAME, APPNAME, REMOTE, USER, HOMEDIR, CODEDIR)
+from fabsettings import (PROJECTNAME, APPNAME, REMOTE, USER, HOMEDIR,
+		       	CODEDIR, VIRTUALENV)
 
 env.projectname = PROJECTNAME
 env.appname = APPNAME
@@ -12,16 +13,15 @@ env.venv = VIRTUALENV
 
 def deploy(branch='master'):
     local('git pull %s %s' % (env.remote, branch))
-    with checkout(branch):
-        local('rsync -auv * %s' % env.codedir)
-    with cd(env.codedir):
-        virtualenv('python manage.py collectstatic')
+    checkout(branch, 'rsync -auv * %s' % env.codedir)
+    with lcd(env.codedir):
+        virtualenv('./manage.py collectstatic')
     local('%s/webapps/%s/bin/restart' % (env.home, env.projectname))
 
 
 def virtualenv(command):
-    local('source %s/bin/activate && %s' % (env.venv, command))
+    local('pwd && source %sbin/activate && %s' % (env.venv, command))
 
 
-def checkout(command):
+def checkout(branch, command):
     local('git checkout %s && %s' % (branch, command))
