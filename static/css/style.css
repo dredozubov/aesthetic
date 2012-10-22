@@ -15,14 +15,17 @@ body {
 }
 
 a {
-	text-decoration:none;
-	color:#353535;
-	}
-	
+  target:"_blank";
+}
+
 a:hover {
 	color:#7f7f7f;
 	}
 
+p {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
 
 .title-background {
   background-color: #948C75;
@@ -41,6 +44,27 @@ a:hover {
     -icab-border-radius: 15px; /* iCab */
     -khtml-border-radius: 15px; /* KHTML/Konqueror */
     -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
+}
+
+.content-box {
+    font-size: medium;
+    display: table-cell;
+    width: 50em;
+    padding: 1em 2em;
+    background: white url(gradient.png) repeat-x scroll top left;
+    /*border: 3px solid #353535;*/
+    border-radius: 15px; /* Standard */
+    -o-border-radius: 15px; /* Opera 10.x */
+    -moz-border-radius: 15px; /* Mozilla/Firefox */
+    -icab-border-radius: 15px; /* iCab */
+    -khtml-border-radius: 15px; /* KHTML/Konqueror */
+    -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
+}
+
+.literal-block {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 3em;
 }
 
 #container {
@@ -126,6 +150,11 @@ a:hover {
   padding-right:40px;  
 }
 
+.post_title {
+  font-size: x-large;
+  display: table-cell;
+}
+
 .post_date { /*this is td*/
   padding-top:10px;
 }
@@ -154,7 +183,7 @@ a:hover {
   height: 40px;
   position: relative;
   padding: 2px;
-  border-top: 2px solid #353535;
+  /*border-top: 2px solid #353535;*/
   text-align: center;
 }
 

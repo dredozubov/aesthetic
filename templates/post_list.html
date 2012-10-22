@@ -10,7 +10,7 @@
       <tbody>
         {% for post in posts %}
             <tr>
-                <td class="post_title title-box"><a href="{{ post.slug }}">{{ post.title }}</a></td>
+                <td class="post_title"><a href="{{ post.slug }}">{{ post.title }}&nbsp;&#8594;</a></td>
             </tr>
             <tr>
                 <td class="post_date">{{ post.created_at }}</td>
