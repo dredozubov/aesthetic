@@ -34,7 +34,7 @@ p {
 .title-box {
     font-size: x-large;
     display: table-cell;
-    width: 16em;
+    width: 24em;
     padding: 1em 2em;
     /*background: #f6c75d url(gradient.png) repeat-x scroll top left;*/
     border: 3px solid #353535;
