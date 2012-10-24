@@ -8,23 +8,36 @@ html {
 }
 
 body {
-  background-color: #E1E1E1;
+  /*background-color: #E1E1E1;*/
+  background: #E1E1E1;
+  background-image: url("/static/background.png");
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
 
 a {
-  target:"_blank";
+  transition: all 0.1s ease-in-out;
+  -webkit-transition:all 0.1s ease-in-out;
+  -moz-transition:all 0.1s ease-in-out;
+  -o-transition:all 0.1s ease-in-out;
 }
 
 a:hover {
 	color:#7f7f7f;
-	}
+}
 
 p {
-  padding-top: 4px;
-  padding-bottom: 4px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.gradient-light-linear {
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
 }
 
 .title-background {
@@ -34,7 +47,6 @@ p {
 .title-box {
     font-size: x-large;
     display: table-cell;
-    width: 24em;
     padding: 1em 2em;
     /*background: #f6c75d url(gradient.png) repeat-x scroll top left;*/
     border: 3px solid #353535;
@@ -47,12 +59,15 @@ p {
 }
 
 .content-box {
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
     font-size: medium;
     display: table-cell;
     width: 50em;
     padding: 1em 2em;
-    background: white url(gradient.png) repeat-x scroll top left;
-    /*border: 3px solid #353535;*/
     border-radius: 15px; /* Standard */
     -o-border-radius: 15px; /* Opera 10.x */
     -moz-border-radius: 15px; /* Mozilla/Firefox */
@@ -100,11 +115,6 @@ p {
   margin-bottom: 40px;
 }
 
-#body {
-  margin-left: 200px;
-  margin-right: 200px;
-}
-
 #body>table {
   width: 100%;
   border-collapse: collapse;
@@ -114,26 +124,20 @@ p {
   vertical-align: top;
 }
 
-#body>table td h2 {
-  font-weight: normal;
-  margin: 0px;
-  padding: 0px;
+#left-space {
+  min-width: 200px;
 }
 
-#body>table tr td:first-child {
-  padding-right: 20px;
-  padding-left: 20px;
-  text-align: justify;
+#content-space {
+  width: 700px;
 }
 
 #menu_right {
-  width: 220px;
+  min-width: 200px;
 }
 
 #menu_right>div {
-  border-left: 2px solid #353535;
-  padding: 0px 20px 20px 20px;
-  margin-left: 90px;
+  padding: 100px 20px 20px 20px;
 }
 
 #menu_right ul {
@@ -183,7 +187,6 @@ p {
   height: 40px;
   position: relative;
   padding: 2px;
-  /*border-top: 2px solid #353535;*/
   text-align: center;
 }
 
