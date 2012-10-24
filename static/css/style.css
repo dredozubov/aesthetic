@@ -17,6 +17,7 @@ body {
 }
 
 a {
+  text-decoration: none;
   transition: all 0.1s ease-in-out;
   -webkit-transition:all 0.1s ease-in-out;
   -moz-transition:all 0.1s ease-in-out;
@@ -24,20 +25,13 @@ a {
 }
 
 a:hover {
+  text-decoration: underline;
 	color:#7f7f7f;
 }
 
 p {
   padding-top: 8px;
   padding-bottom: 8px;
-}
-
-.gradient-light-linear {
-    background-image: -webkit-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-    background-image: -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-    background-image: -o-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-    background-image: -ms-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
-    background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
 }
 
 .title-background {
@@ -48,7 +42,6 @@ p {
     font-size: x-large;
     display: table-cell;
     padding: 1em 2em;
-    /*background: #f6c75d url(gradient.png) repeat-x scroll top left;*/
     border: 3px solid #353535;
     border-radius: 15px; /* Standard */
     -o-border-radius: 15px; /* Opera 10.x */
@@ -56,6 +49,23 @@ p {
     -icab-border-radius: 15px; /* iCab */
     -khtml-border-radius: 15px; /* KHTML/Konqueror */
     -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
+}
+
+.menu-box {
+    background-image: -webkit-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-image: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    font-size: medium;
+    padding: 1em 2em;
+    border-radius: 15px; /* Standard */
+    -o-border-radius: 15px; /* Opera 10.x */
+    -moz-border-radius: 15px; /* Mozilla/Firefox */
+    -icab-border-radius: 15px; /* iCab */
+    -khtml-border-radius: 15px; /* KHTML/Konqueror */
+    -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
+    /*box-shadow: -1px -1px #7f7f7f;*/
 }
 
 .content-box {
@@ -136,17 +146,46 @@ p {
   min-width: 200px;
 }
 
+#menu_right_corner {
+  height: 110px;
+}
+
+#menu_right_content {
+  background-image: -webkit-linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image: -moz-linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image: -o-linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image: -ms-linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+  background-image: linear-gradient(rgba(255,255,255,.4), rgba(255,255,255,0));
+}
+
+#menu_right_splitter {
+  height: 20px;
+}
+
 #menu_right>div {
-  padding: 100px 20px 20px 20px;
+  max-width: 200px;
+  padding: 0px 20px 20px 20px;
 }
 
 #menu_right ul {
   padding: 0px;
 }
 
-#menu_right li {
-  list-style: none;
-  margin-bottom: 30px;
+#menu_right_content ul {
+  list-style-type: none;
+}
+
+#menu_right_content ul li a {
+  text-decoration: none;
+}
+
+#menu_right_internal_links li {
+  margin-bottom: 15px;
+}
+
+#menu_right_external_links li {
+  margin-bottom: 4px;
+  font-size: small;
 }
 
 #posts tr td {
@@ -160,6 +199,7 @@ p {
 }
 
 .post_date { /*this is td*/
+  font-size: smaller;
   padding-top:10px;
 }
 
@@ -174,8 +214,8 @@ p {
   padding-right:0;
 }
 
-.resource_links a {
-  text-decoration: none;
+.read_more_link {
+  float:left;
 }
 
 #clearfooter {

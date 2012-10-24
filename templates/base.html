@@ -57,17 +57,34 @@
       </td>
       <td id="menu_right">
         <div>
-          <ul>
-            <li><a href="{% url posts:list %}">Записи</a></li>
-            <li><a href="{% url about %}">Обо мне</a></li>
-            <li class="resource_links">
-              <a href="https://plus.google.com/116249723557063536298/posts" target="_blank"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png"></a>
-              &nbsp;
-              <!--<a href="https://twitter.com/rufuse" target="_blank"><img src="{% static "/twitter-bird-light-bgs.ico" %}"></a>-->
-
-            </li>
+          <div id="menu_right_corner"></div>
+          <div id="menu_right_content"  class="menu-box">
+          <ul class="resource_links">
+            <div id="menu_right_internal_links">
+              <li><a href="{% url posts:list %}">Записи</a></li>
+              <li><a href="{% url about %}">Обо мне</a></li>
+            </div> <!--/menu_right_internal_links-->
+            <div id="menu_right_splitter"></div>
+            <div id="menu_right_external_links">
+              <li>
+                <a href="https://plus.google.com/116249723557063536298/posts" target="_blank"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png">&nbsp;Google plus</a>
+              </li>
+              <li>
+                <a href="http://habrahabr.ru/users/rufuse/" target="_blank"><img src="{% static "habr.jpeg" %}">&nbsp;Хабрахабр</a>
+              </li>
+              <li>
+                <a href="http://denisredozubov.moikrug.ru" target="_blank"><img src="{% static "moikrug.jpeg" %}">&nbsp;Мой Круг</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rufuse" target="_blank"><img src="{% static "twitter.ico" %}">&nbsp;Twitter</a>
+              </li>
+              <li>
+                <a href="http://www.linkedin.com/pub/denis-redozubov/36/b8b/4a7" target="_blank"><img src="{% static "linkedin.ico" %}">&nbsp;Linked In</a>
+              </li>
+            </div> <!--/menu_right_external_links-->
           </ul>
         </div>
+      </div>
       </td> <!--/menu_right-->
 
       </tr></table>
