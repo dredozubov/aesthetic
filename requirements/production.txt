@@ -3,3 +3,4 @@ django
 south
 docutils
 pygments
+django_compressor
