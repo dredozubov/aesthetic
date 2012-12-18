@@ -1,3 +1,12 @@
+/*
+:Author: Denis Redozubov
+:Contact: denis.redozubov@gmail.com
+:Copyright: This stylesheet has been placed in the public domain.
+
+Stylesheet for denisredozubov.com, for use with Docutils.
+*/
+
+
 * {
   line-height: 140%;
   margin: 0;
@@ -8,7 +17,6 @@ html {
 }
 
 body {
-  /*background-color: #E1E1E1;*/
   background: #E1E1E1;
   background-image: url("/static/background.png");
   margin: 0px;
@@ -27,6 +35,15 @@ a {
 a:hover {
   text-decoration: underline;
 	color:#7f7f7f;
+}
+
+a:link.underline {
+	border-color: #bcccf0;
+}
+
+a:visited.underline {
+  color: #bc9cff;
+	border-color: #d0b9e0;
 }
 
 p {
@@ -69,11 +86,7 @@ p {
 }
 
 .content-box {
-    background-image: -webkit-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
-    background-image: -moz-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
-    background-image: -o-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
-    background-image: -ms-linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
-    background-image: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,0));
+    background-color: rgba(255, 255, 255, .4);
     font-size: medium;
     display: table-cell;
     width: 50em;
@@ -240,4 +253,25 @@ p {
 
 #credit img {
   height: 54px;
+}
+
+
+/* docutils-related stuff by David Goodger (goodger@python.org) */
+
+dl.docutils dd {
+  margin-bottom: 0.5em;
+  padding-left: 2em;
+}
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/*Uncomment (and remove this text!) to get bold-faced definition list terms*/
+dl.docutils dt {
+  font-weight: bold
+}
+
+.code {
+  background-color: #eeeeee
 }
