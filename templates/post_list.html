@@ -17,8 +17,10 @@
             </tr>
             <tr>
               <td class="post_body" colspan="2">
-                <p>{{ post.text|safe|truncatechars:512 }}</p>
-                <a href="{{ post.slug }}" class="read_more_link">{% if post.text|length > 512 %}[полностью]{% endif %}</a>
+                <p>{{ post.text|safe|truncatewords:20 }}</p>
+                {% ifnotequal post text|truncatewords:20 %}
+                <a href="{{ post.slug }}" class="read_more_link">[полностью]</a>
+                {% endifnotequal %}
               </td>
             </tr>
             <tr>
