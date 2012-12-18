@@ -1,0 +1,26 @@
+#flake8: NOQA
+try:
+    from base import *
+except ImportError, e:
+    print 'Unable to load base.py:', e
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'dredozubov_blog',                      # Or path to database file if using sqlite3.
+        'USER': 'dredozubov_blog',                      # Not used with sqlite3.
+        'PASSWORD': '7ccd9dc4',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        #'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
+
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USER = 'dredozubov'
+EMAIL_HOST_PASSWORD = '1awesome2password#'
+DEFAULT_FROM_EMAIL = 'admin@denisredozubov.com'
+SERVER_EMAIL = 'admin@denisredozubov.com'
+
+
+DEBUG = False
+
