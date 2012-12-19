@@ -65,15 +65,19 @@
               <li><a href="{% url about %}">Обо мне</a></li>
             </div> <!--/menu_right_internal_links-->
             <div id="menu_right_splitter"></div>
+              <li>
+              <a href="{% url posts:feed %}" target="_blank"><img src="{% static "rss32x32_1.png" %}">&nbsp;Подписаться</a>
+              </li>
+            <div id="menu_right_splitter"></div>
             <div id="menu_right_external_links">
               <li>
                 <a href="https://plus.google.com/116249723557063536298/posts" target="_blank"><img src="https://ssl.gstatic.com/images/icons/gplus-16.png">&nbsp;Google plus</a>
               </li>
               <li>
-                <a href="http://habrahabr.ru/users/rufuse/" target="_blank"><img src="{% static "habr.jpeg" %}">&nbsp;Хабрахабр</a>
+                <a href="http://habrahabr.ru/users/rufuse/" target="_blank"><img src="{% static "habr.png" %}">&nbsp;Хабрахабр</a>
               </li>
               <li>
-                <a href="http://denisredozubov.moikrug.ru" target="_blank"><img src="{% static "moikrug.jpeg" %}">&nbsp;Мой Круг</a>
+                <a href="http://denisredozubov.moikrug.ru" target="_blank"><img src="{% static "moikrug.gif" %}">&nbsp;Мой Круг</a>
               </li>
               <li>
                 <a href="https://twitter.com/rufuse" target="_blank"><img src="{% static "twitter.ico" %}">&nbsp;Twitter</a>

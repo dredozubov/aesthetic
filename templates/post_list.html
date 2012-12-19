@@ -6,7 +6,7 @@
 
 {% block content %}
 {% if posts %}
-    <table id="posts">
+    <table id="content">
       <tbody>
         {% for post in posts %}
             <tr>
@@ -19,7 +19,7 @@
               <td class="post_body" colspan="2">
                 <p>{{ post.text|safe|truncatewords:20 }}</p>
                 {% ifnotequal post text|truncatewords:20 %}
-                <a href="{{ post.slug }}" class="read_more_link">[полностью]</a>
+                  <a href="{{ post.slug }}" class="read_more_link">[полностью]</a>
                 {% endifnotequal %}
               </td>
             </tr>
