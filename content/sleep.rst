@@ -1,7 +1,7 @@
 Сон: фазы сна, сколько нужно спать
 
 
-.. image:: http://kendallbruns.files.wordpress.com/2010/08/promisesleepbook.jpg
+.. image:: ../media/posts/sleep/sleep_promiseofsleep.jpg
   ::alt William C. Dement M.D. "The Promise Of Sleep"
 
 
