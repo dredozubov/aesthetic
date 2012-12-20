@@ -46,26 +46,21 @@ a:visited.underline {
 	border-color: #d0b9e0;
 }
 
-p {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
 .title-background {
   background-color: #948C75;
 }
 
 .title-box {
-    font-size: x-large;
-    display: table-cell;
-    padding: 1em 2em;
-    border: 3px solid #353535;
-    border-radius: 15px; /* Standard */
-    -o-border-radius: 15px; /* Opera 10.x */
-    -moz-border-radius: 15px; /* Mozilla/Firefox */
-    -icab-border-radius: 15px; /* iCab */
-    -khtml-border-radius: 15px; /* KHTML/Konqueror */
-    -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
+  font-size: x-large;
+  display: table-cell;
+  padding: 1em 1em;
+  border: 3px solid #353535;
+  border-radius: 15px; /* Standard */
+  -o-border-radius: 15px; /* Opera 10.x */
+  -moz-border-radius: 15px; /* Mozilla/Firefox */
+  -icab-border-radius: 15px; /* iCab */
+  -khtml-border-radius: 15px; /* KHTML/Konqueror */
+  -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
 }
 
 .menu-box {
@@ -86,11 +81,11 @@ p {
 }
 
 .content-box {
+    max-width: 700px;
     background-color: rgba(255, 255, 255, .4);
     font-size: medium;
     display: table-cell;
     width: 50em;
-    max-width: 700px;
     padding: 1em 2em;
     border-radius: 15px; /* Standard */
     -o-border-radius: 15px; /* Opera 10.x */
@@ -100,10 +95,51 @@ p {
     -webkit-border-radius: 15px; /* Webkit/Safari/Chrome/etcetera */
 }
 
+.content-box .imagebox {
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 7px;
+  line-height: 1em;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+  margin-right: 10px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.content-box .imagebox:hover {
+  background-color: gray;
+}
+
+.content-box p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+
 .literal-block {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 3em;
+}
+
+.section {
+}
+
+.section h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #DCC;
+  margin-top: 7px;
+  margin-bottom: 15px;
 }
 
 #container {
@@ -156,6 +192,12 @@ p {
   width: 700px;
 }
 
+#content-space img {
+  margin-top: 7px;
+  margin-bottom: 15px;
+  max-width: 586px;
+}
+
 #menu_right {
   min-width: 200px;
 }
@@ -202,12 +244,6 @@ p {
   font-size: small;
 }
 
-#content tr td {
-  max-width: 720px;
-  padding-left:40px;
-  padding-right:40px;  
-}
-
 .post_title {
   font-size: x-large;
   display: table-cell;
@@ -216,17 +252,6 @@ p {
 .post_date { /*this is td*/
   font-size: smaller;
   padding-top:10px;
-}
-
-.post_body { /*this is td*/
-  padding-top:40px;
-  padding-bottom:40px;
-  padding-right:40px;  
-}
-
-.post_body:first-child { /*this is td*/
-  padding-left:40px;
-  padding-right:0;
 }
 
 .read_more_link {
@@ -241,7 +266,6 @@ p {
 #footer {
   height: 40px;
   position: relative;
-  padding: 2px;
   text-align: center;
 }
 
@@ -252,11 +276,6 @@ p {
 #credit {
   text-align: center;
 }
-
-#credit img {
-  height: 54px;
-}
-
 
 /* docutils-related stuff by David Goodger (goodger@python.org) */
 
@@ -274,37 +293,34 @@ dl.docutils dt {
   font-weight: bold
 }
 
-.code {
-  background-color: #eeeeee
-}
-
-img.align-left, .figure.align-left, object.align-left {
-  clear: left ;
-  float: left ;
-  margin-right: 1em }
-
-img.align-right, .figure.align-right, object.align-right {
-  clear: right ;
-  float: right ;
-  margin-left: 1em }
-
-img.align-center, .figure.align-center, object.align-center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.align-left {
-  text-align: left }
-
-.align-center {
-  clear: both ;
-  text-align: center }
-
-.align-right {
-  text-align: right }
-
 /* reset inner alignment in figures */
 div.align-right {
   text-align: inherit }
 
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
