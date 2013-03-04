@@ -23,6 +23,8 @@
                 {% endifnotequal %}
               </td>
             </tr>
+            <tr class="divider-space"></tr>
+        {% endfor %}
             <tr>
               <td>
                   {% if is_paginated %}
@@ -42,7 +44,6 @@
                   {% endif %}
               </td>
             </tr>
-        {% endfor %}
       </tbody>
     </table>
     {# .... **Now the pagination section** .... #}

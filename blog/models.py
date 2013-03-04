@@ -6,7 +6,7 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now=True)
     edited_at = models.DateTimeField(auto_now=True)
     title = models.CharField(u'Название', max_length=255)
-    slug = models.CharField(u'slug(англ)', max_length=128)
+    slug = models.CharField(u'slug(англ)', max_length=128, unique=True)
     text = models.TextField(u'Текст', default=u'')
     text_rst = models.TextField(u'Текст(rst)', default=u'')
 

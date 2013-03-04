@@ -129,6 +129,10 @@ a:visited.underline {
   padding-bottom: 8px;
 }
 
+.divider-space {
+  height: 40px;
+}
+
 
 .literal-block {
   padding-top: 8px;
