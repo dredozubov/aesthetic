@@ -17,7 +17,6 @@ def deploy(branch='master'):
 
     with lcd(env.codedir):
         virtualenv('pip install -r requirements/production.txt')
-        # virtualenv('./manage.py collectstatic')
     local('%s/webapps/%s/bin/restart' % (env.home, env.projectname))
 
 
