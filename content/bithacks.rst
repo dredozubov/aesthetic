@@ -23,7 +23,7 @@ POWERS_OF_TWO - статический массив unsigned long чисел, с
 
 Сброс определенного бита с 1 в 0 не намного сложнее:
 
-.. code-block:: сpp
+.. code-block:: cpp
 
     unsigned long unset_nth_bit(unsigned long number, int n)
     {
@@ -34,7 +34,7 @@ POWERS_OF_TWO - статический массив unsigned long чисел, с
 
 Генерация минимального значения с n-установленными битами:
 
-.. code-block:: сpp
+.. code-block:: cpp
 
     unsigned long create_min_n_bit_set_int(int n)
     {
@@ -50,7 +50,7 @@ POWERS_OF_TWO - статический массив unsigned long чисел, с
 
 Генерация следующего числа с таким же количеством установленных бит(рецепт из интернета):
 
-.. code-block:: сpp
+.. code-block:: cpp
 
     unsigned long next_with_same_number_of_bits(unsigned long v)
     {
