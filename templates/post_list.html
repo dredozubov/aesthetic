@@ -15,14 +15,6 @@
             <tr>
                 <td class="post_date">{{ post.created_at }}</td>
             </tr>
-            <tr>
-              <td class="post_body" colspan="2">
-                <p>{{ post.text|safe|truncatewords:20 }}</p>
-                {% ifnotequal post text|truncatewords:20 %}
-                  <a href="{{ post.slug }}" class="read_more_link">[полностью]</a>
-                {% endifnotequal %}
-              </td>
-            </tr>
             <tr class="divider-space"></tr>
         {% endfor %}
             <tr>
