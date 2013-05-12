@@ -25,6 +25,7 @@ body {
 }
 
 a {
+  color: #333332;
   text-decoration: none;
   transition: all 0.1s ease-in-out;
   -webkit-transition:all 0.1s ease-in-out;
@@ -85,7 +86,7 @@ a:visited.underline {
 }
 
 .content-box {
-    max-width: 700px;
+    max-width: 900px;
     background-color: rgba(255, 255, 255, .4);
     font-size: medium;
     display: table-cell;
@@ -207,7 +208,7 @@ a:visited.underline {
 }
 
 #menu_right {
-  min-width: 200px;
+  min-width: 180px;
 }
 
 #menu_right_corner {
@@ -245,6 +246,10 @@ a:visited.underline {
 
 #menu_right_internal_links li {
   margin-bottom: 15px;
+}
+
+#menu_right_internal_links li a {
+  font-size: x-large;
 }
 
 #menu_right_external_links li {
