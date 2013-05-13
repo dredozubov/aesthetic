@@ -1,2 +1,4 @@
 *.pyc
 *.DS_Store
+test_db.sqlite3
+settings/local.py
